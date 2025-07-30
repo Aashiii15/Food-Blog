@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pure CSS Sidebar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Hide the checkbox */
+    #toggle {
+      display: none;
+    }
+
+    /* Menu icon */
+    .menu-icon {
+      font-size: 30px;
+      padding: 15px;
+      cursor: pointer;
+      display: inline-block;
+      background-color: #333;
+      color: white;
+    }
+
+    /* Sidebar base style */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background-color: #111;
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+      color: white;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .sidebar a:hover {
+      background-color: #575757;
+    }
+
+    /* Toggle the sidebar when checkbox is checked */
+    #toggle:checked ~ .sidebar {
+      left: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Checkbox for toggling -->
+  <input type="checkbox" id="toggle">
+
+  <!-- Menu icon -->
+  <label for="toggle" class="menu-icon">☰</label>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,256 @@
+/* header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 100px;
+}
+
+.icon {
+  cursor: pointer;
+  font-size: 18pt;
+}
+
+
+.icon li a:hover{
+  background-color:gray;
+  color:white;
+}
+
+.title {
+  position: absolute;
+  left: 45%;
+  font-size: 18pt;
+}
+
+.last-item{
+  font-size: 18pt;
+  left:100%
+}
+
+
+/* Hide checkbox */
+#sidebarToggle {
+  display: none;
+}
+
+/* Menu icon (☰) */
+.menu-icon {
+  font-size: 25px;
+  padding: 15px;
+  cursor: pointer;
+  color: black;
+  display: inline-block;
+}
+
+/* Sidebar styles */
+.sidebar {
+  position: fixed;
+  top: 0%;
+  left: -250px;
+  width: 300px;
+  height: 100%;
+  background-color:white;
+  transition: 0.3s;
+}
+
+.sidebar a {
+  display: block;
+  padding: 25px 25px;
+  color: black;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+.sidebar a:hover {
+  background-color:gainsboro;
+}
+
+/* Close button (×) */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Slide in sidebar when checkbox is checked */
+#sidebarToggle:checked ~ .sidebar {
+  left: 0;
+}
+
+
+/* For food images */
+
+.container{
+  padding:18px 115px 0px 115px
+}
+
+.first-div{
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(8, auto);
+  gap: 10px;
+}
+
+.first-div img{
+    width:100%;
+    height:75%
+}
+
+/* <<1234>> */
+
+ul{
+  list-style-type: none;
+  display: flex;
+  padding-top: 30px;
+  padding-right: 50%;
+  padding-left: 50%;
+  padding-bottom: 50px;
+  gap: 20px;
+  justify-content: center;
+  font-size: 15pt;
+}
+
+li a{
+  color: black;
+  text-align: center;
+}
+        
+li a:hover{
+  background-color: black;
+  color:white;
+}
+
+ul li a{
+  text-decoration: none;
+  font-size: 15pt;
+}
+
+
+/* Chef */
+
+.third-div{
+    text-align:center ;
+}
+
+.third-div img{
+    display: block;
+    margin:auto;
+    width:75%;
+    height: 500px;
+}
+
+/*Footer */
+
+.last-div{
+    display: flex;
+    justify-content: space-between;
+    padding: 0%;
+}
+
+.last img{
+    height:17%;
+    width:20%;
+}
+
+.box{
+    background-color:gray;
+    color: white;
+}
+
+.last-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  padding: 0px;
+}
+
+.blog{
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding:0;
+}
+
+.blog img{
+  width: 75px;
+  height: auto;
+}
+
+.post h2 {
+  margin: 0%;
+}
+
+.post p {
+  margin-top: 0.5rem;
+}
+
+
+/* Mobile Screen */
+@media only screen and (max-width: 600px) {
+      .first-div{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, auto);
+  }
+}
+
+ /* medium screen */
+    @media only screen and (min-width: 600px) {
+      .first-div{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+    /* large screen */
+    @media only screen and (min-width: 768px) {
+     .first-div{
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+}
+
+
+
+.last-div{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 0px;
+}
+
+/* phone screen */
+@media only screen and (max-width: 600px) {
+      .last-div{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, auto);
+  }
+}
+
+ /* medium screen */
+     @media only screen and (min-width: 600px) {
+      .last-div{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+} 
+
+    /* large screen */
+    @media only screen and (min-width: 768px) {
+     .last-div{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, auto);
+  }
+} 
+
+hr{
+  border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}
